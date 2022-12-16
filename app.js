@@ -22,8 +22,7 @@ app.get('/', (req, res) => {
   res.status(200).render('index');
 });
 
-app.get('/beers', (req, res, next) => {
- 
+app.get('/beers', (req, res, next) => { 
   punkAPI 
   .getBeers()
   .then(beersFromApi => {
@@ -33,7 +32,12 @@ app.get('/beers', (req, res, next) => {
 })
 
 app.get('/random-beer', (req, res, next) => {
-  res.status(200).render('random-beer')
+  punkAPI
+  .getRandom()
+  .then(responseFromAPI => {
+    res.status(200).render('random-beer', {responseFromAPI})
+  })
+  .catch(error => console.log(error));  
 })
 
 
