@@ -22,12 +22,14 @@ app.get('/', (req, res) => {
   res.status(200).render('index');
 });
 
-app.get('/beers', (req, res, next) => { 
-  res.status(200).render('beers') 
-  // .getBeers()
-  // .then(beersFromApi => console.log('Beers from the database: ', beersFromApi))
-  // .catch(error => console.log(error));
-  
+app.get('/beers', (req, res, next) => {
+ 
+  punkAPI 
+  .getBeers()
+  .then(beersFromApi => {
+    res.status(200).render('beers', {beersFromApi});
+  })
+    .catch(error => console.log(error));  
 })
 
 app.get('/random-beer', (req, res, next) => {
