@@ -1,7 +1,49 @@
+ {{#each responseFromAPI}}     
 <div class="container-random-beer">
-{{#each responseFromAPI}}
-{{> beerpartial this}}
-<p>{{this.food_pairing}}</p>
-<p>{{this.brewer_tips}}</p>
-{{/each}}
+  <img src={{this.image_url}} alt={{this.name}} />
+  <div class="beerDB">
+    <h3>{{this.name}}</h3>
+    <p>{{this.description}}</p>
+    <h4>Tagline:</h4>
+    <p>{{this.tagline}}</p>
+    <ul>
+      {{#each this.food_pairing}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    <h4>Brewers tips:</h4>
+    <p>{{this.brewers_tips}}</p>
+  </div>
 </div>
+{{/each}}
+
+
+    {{!-- {{#each responseFromAPI}}       
+
+     {{> beerpartial this}}
+
+  <h4>Food Pairing</h4>
+    {{#each this.food_pairing}}
+    <li>{{this}}</li>
+    {{/each}}
+    <h4>Brewers Tips
+    <p>{{this.brewers_tips}}
+   
+{{/each}} --}}
+
+
+{{!-- <div class="container-random-beer">
+  <div>
+    {{#each responseFromAPI}}       
+  <div>
+     {{> beerpartial this}}
+  </div>
+  <h4>Food Pairing</h4>
+    {{#each this.food_pairing}}
+    <li>{{this}}</li>
+    {{/each}}
+    <h4>Brewers Tips</h4>
+    <p>{{this.brewers_tips}}</p>
+   </div>    
+{{/each}}
+</div> --}}

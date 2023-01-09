@@ -3,5 +3,125 @@ white: #f7f9f9;
 light-blue: #2081c3;
 dark-blue: #0a2c42;
 grey: #bfbfbf;
-font-family: Arial, Helvetica, sans-serif;
+
 */
+body{
+    font-size: 16px;
+    width: 1280px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;    
+} 
+/* Navegation menu */
+
+header{
+    background-color: #2081c3;
+    width: 1280px;
+    height: 50px;
+    display: flex;
+    align-items: center;      
+}
+.nav-content li{
+    display: inline-block;
+    padding: 5px 10px;
+}
+.nav-content a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Content img and buttons */
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    gap: 5vh;
+}
+.home-img{
+    width: 30vh;
+}
+
+/* Buttons beers*/
+
+.content .buttom-check{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.content .buttom-check .button{
+    background-color: #2081c3;
+    border: none;
+    border-radius: 1vh;
+    padding: 0.5rem 1.3rem;
+    color: white;
+}
+.content .buttom-check .button:hover{
+    box-shadow: 0px 4px 4px #2081c3;
+    background-color: #044b4b;
+}
+/* Secttion Beers.hbs*/
+
+.container-beers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Beers partial*/
+
+.beers-partials{
+    width: 30vh;
+    height: 30vh;
+    margin: auto;
+    width: 33%;
+    padding-top: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 20vh;   
+} 
+
+.beers-partials img{
+    width: 30vh;
+    height: 20vh;
+    object-fit: contain;
+    flex-wrap: wrap;
+}
+div.content-galery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+}
+
+.content-galery p{
+    width: 80%;
+    text-align:start;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+   
+}
+.content-galery h2{    
+    margin-top: 3vh;
+    font-weight: bold;
+}
+
+/* Random beer*/
+
+.container-random-beer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 80px;
+  }
+  .container-random-beer > img {
+    height: 200px;
+    margin: 100px 0;
+  }
+  .beerDB {
+    width: 50%;
+    padding: 10px;
+  }
