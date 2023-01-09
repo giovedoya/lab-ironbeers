@@ -13,6 +13,10 @@
     "punkapi-javascript-wrapper": "^1.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   }
 }
